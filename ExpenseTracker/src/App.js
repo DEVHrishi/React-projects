@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import NewExpense from './components/NewExpense/NewExpense';
 import Expenses from './components/Expenses/Expenses';
 
@@ -8,21 +8,39 @@ const App = () => {
     
     const [expenses, setExpenses] = useState(DUMMY_EXPENSE);
 
-    fetch('http://localhost/sample-api/api/read.php').then(
+    function fetchData() {
+        fetch('http://techgun.website/sample/api/read.php').then(
         response => {
             return response.json();
         }
-    ).then(
-        data => {
-            console.log(data)
-            setExpenses(data);
-        }
-    )
-
-    const addExpenseHandler = (expense) => {
-        const updatedExpense = [expense, ...expenses];
-        setExpenses(updatedExpense)
+        ).then(
+            data => {
+                console.log(data)
+                setExpenses(data);
+            }
+        )
     }
+
+    useEffect(() => {
+        fetchData()
+    },[]);
+
+    
+    const addExpenseHandler = (expense) => {
+        fetch('http://techgun.website/sample/api/create.php', {
+            method: 'POST',
+            body: JSON.stringify(expense),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(
+            response => {
+                fetchData()
+            }
+        )
+    }
+
+    
 
     return (
         <div>

@@ -7,8 +7,6 @@ import { IoLogoTwitter } from "react-icons/io";
 const Footer = () => {
     return (
         <footer>
-            <a href="#header" className='footer__logo'>EGATOR</a>
-
             <ul className='permalinks'>
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -23,10 +21,6 @@ const Footer = () => {
                 <a href="https://www.facebook.com/hrishikesh.roy.3114/" target='_blank' rel="noreferrer"><FaFacebookF /></a>
                 <a href="https://www.instagram.com/Hrishikesh_Roy71/?hl=en" target='_blank' rel="noreferrer"><FaInstagram /></a>
                 <a href="https://twitter.com/Hrishik97724425" target='_blank' rel="noreferrer"><IoLogoTwitter /></a>
-            </div>
-
-            <div className='footer__copyright'>
-                <small>&copy; EGATOR Tutorials. All rights reserved.</small>
             </div>
         </footer>
     )

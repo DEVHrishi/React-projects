@@ -1,8 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/portfolio1.jpg'
-import IMG2 from '../../assets/portfolio2.jpg'
+
 import IMG3 from '../../assets/portfolio3.jpg'
 import IMG4 from '../../assets/portfolio4.jpg'
 import IMG5 from '../../assets/portfolio5.png'
@@ -11,18 +10,18 @@ import IMG6 from '../../assets/portfolio6.jpg'
 const data = [
     {
         id: 1,
-        image: IMG1,
-        title: 'stocks trading app: mobile app, visual identity, attributes',
-        github: 'https://github.com',
-        demo: 'https://dribbble.com/shots/18742571-stocks-trading-app-mobile-app-visual-identity-attributes'
+        image: 'https://cdn.dribbble.com/users/6337227/screenshots/17230478/media/e4379e3065e4ba2bea8c4767a2dbf599.png?compress=1&resize=1000x750&vertical=top',
+        title: 'MOVIE-MIX : movie app, voice chat bot command',
+        github: 'https://github.com/DEVHrishi/React-projects/tree/main/moviemix',
+        demo: 'https://moviemix-s1789.web.app/'
     },
 
     {
         id: 2,
-        image: IMG2,
-        title: 'Agriculture Assistant App Design Concept',
-        github: 'https://github.com',
-        demo: 'https://dribbble.com/shots/18743673-Agriculture-Assistant-App-Design-Concept'
+        image: 'https://cdn.dribbble.com/users/1619633/screenshots/17341355/media/eae8951fe58f8254deb9b47bc521aa5f.png?compress=1&resize=1000x750&vertical=top',
+        title: 'BURGER-BUILDER : burger app, real time visualizer',
+        github: 'https://github.com/DEVHrishi/React-projects/tree/main/Burger-Builder',
+        demo: 'https://burger-builder-355.web.app/'
     },
 
     {

@@ -1,22 +1,22 @@
 import React from 'react';
 import './App.css';
-import ClassCounter  from "./components/ClassCounter";
-import HookCounter from "./components/HookCounter";
-import HookCounterTwo from "./components/HookCounterTwo";
-import HookCounterThree from "./components/HookCounterThree";
-import HookCounterFour from "./components/HookCounterFour";
-
+import { Routes, Route } from "react-router-dom";
+import { Home } from './components/Home';
+import { About } from './components/About';
+import { OrderSummary } from './components/OrderSummary';
+import { Navbar } from './components/Navbar';
 
 function App() {
   return (
-    <div>
-      {/*<ClassCounter />
-      <HookCounter />
-      <HookCounterTwo />
-      <HookCounterThree />*/}
-      <HookCounterFour />
-    </div>
-    
+    <>
+      <Navbar>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="order-summary" element={<OrderSummary />} />
+        </Routes>
+      </Navbar>
+    </>
   )
 }
 

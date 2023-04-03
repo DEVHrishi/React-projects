@@ -1,21 +1,19 @@
-import React from 'react'
-
-import { Routes, Route } from 'react-router-dom'
-import Results from './Results'
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Results from './Results';
 
 const Routess = () => {
   return (
     <div className='p-4'>
       <Routes>
-        <Route exact path="/">
-          <Route to="/search" />
-        </Route>
-        <Route exact path={['/search', '/images', '/news', '/videos']}>
-          <Results />
-        </Route>
+        <Route path="/" element={<Navigate to="/search" />} />
+        <Route path="/search" element={<Results />} />
+        <Route path="/images" element={<Results />} />
+        <Route path="/news" element={<Results />} />
+        <Route path="/videos" element={<Results />} />
       </Routes>
     </div>
-  )
-}
+  );
+};
 
-export default Routess
+export default Routess;

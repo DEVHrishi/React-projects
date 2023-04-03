@@ -4,11 +4,14 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './App';
 import './index.css';
+import { ResultContextProvider } from './contexts/ResultContextProvider';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Router>
-        <App />
-    </Router>
+    <ResultContextProvider>
+        <Router>
+            <App />
+        </Router>
+    </ResultContextProvider>
 );

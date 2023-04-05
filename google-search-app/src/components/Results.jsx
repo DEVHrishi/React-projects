@@ -10,7 +10,7 @@ const Results = () => {
   const location = useLocation()
 
   useEffect(() => {
-    getResults('/search/q=java&num=30')
+    getResults('/search/?query=java&num=30')
   }, [])
 
   if(isLoading) return <Loading />

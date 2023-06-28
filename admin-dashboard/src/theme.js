@@ -5,7 +5,7 @@ import { createTheme } from '@mui/material/styles';
 export const tokens = (mode) => ({
     ...(mode === 'dark'
     ? {
-        gray: {
+        grey: {
             100: "#e0e0e0",
             200: "#c2c2c2",
             300: "#a3a3a3",
@@ -61,7 +61,7 @@ export const tokens = (mode) => ({
             900: "#151632"
         },
     } : {
-        gray: {
+        grey: {
             100: "#141414",
             200: "#292929",
             300: "#3d3d3d",
@@ -135,9 +135,9 @@ export const themeSettings = (mode) => {
                     main: colors.greenAccent[500],
                 },
                 neutral: {
-                    dark: colors.gray[700],
-                    main: colors.gray[500],
-                    light: colors.gray[100],
+                    dark: colors.grey[700],
+                    main: colors.grey[500],
+                    light: colors.grey[100],
                 },
                 background: {
                     default: colors.primary[500],
@@ -150,9 +150,9 @@ export const themeSettings = (mode) => {
                     main: colors.greenAccent[500],
                 },
                 neutral: {
-                    dark: colors.gray[700],
-                    main: colors.gray[500],
-                    light: colors.gray[100],
+                    dark: colors.grey[700],
+                    main: colors.grey[500],
+                    light: colors.grey[100],
                 },
                 background: {
                     default: '#fcfcfc',
